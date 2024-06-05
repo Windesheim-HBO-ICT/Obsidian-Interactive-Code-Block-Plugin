@@ -1,17 +1,17 @@
 # Windesheim's Interactive Code Blocks
 
-This plugin makes it possible to preview and test [interactive code blocks](github.com/windesheim-hbo-ict/deeltaken) 
+This plugin makes it possible to preview and test [interactive code blocks](https://github.com/windesheim-hbo-ict/deeltaken) 
 in Obsidian!
 
 ## About
-This plugin is meant to assist with creating [interactive code blocks](github.com/windesheim-hbo-ict/deeltaken), it is not 
+This plugin is meant to assist with creating [interactive code blocks](https://github.com/windesheim-hbo-ict/deeltaken), it is not 
 and will never be a replacement for an actual interactive code block. If that is
-what you are searching for, take a look at [our quartz plugin](todo) we use this 
+what you are searching for, take a look at [our quartz plugin](https://github.com/Windesheim-HBO-ICT/Leertaken/blob/main/quartz/quartz/plugins/transformers/codeRunner.ts) we use this 
 plugin to serve web pages that contain interactive code blocks.
 
 ## Usage
 The markdown syntax to use the interactive code blocks is the same as the syntax 
-used in the [quartz plugin](). Here are some examples:
+used in the [quartz plugin](https://github.com/Windesheim-HBO-ICT/Leertaken/blob/main/quartz/quartz/plugins/transformers/codeRunner.ts). Here are some examples:
 
 Note that **all code blocks will be runable in the obsidian editor**. This is 
 **not** the case when they are properly displayed by the quartz plugin.
