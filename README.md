@@ -1,20 +1,32 @@
-# Windesheim's Interactive Code Blocks
+# Interactieve Code Blocks
 
-This plugin makes it possible to preview and test [interactive code blocks](https://github.com/windesheim-hbo-ict/deeltaken) 
-in Obsidian!
+Deze plugin maakt het mogelijk om 
+[interactieve code blocks](https://github.com/windesheim-hbo-ict/deeltaken) 
+te bekijken en te testen. Dit doe je door een markdown bestand in de reader 
+modus te bekijken (rechts boven in Obsidian).
 
-## About
-This plugin is meant to assist with creating [interactive code blocks](https://github.com/windesheim-hbo-ict/deeltaken), it is not 
-and will never be a replacement for an actual interactive code block. If that is
-what you are searching for, take a look at [our quartz plugin](https://github.com/Windesheim-HBO-ICT/Leertaken/blob/main/quartz/quartz/plugins/transformers/codeRunner.ts) we use this 
-plugin to serve web pages that contain interactive code blocks.
+## Over
+Deze plugin is bedoelt om te assisteren bij het maken van interactive code 
+blocks, deze plugin is geen vervanging voor de daadwerkelijke interactive code 
+block. Als je dat is waar je naar zoekt, bekijk dan onze [quartz plugin](https://github.com/Windesheim-HBO-ICT/Leertaken/blob/main/quartz/quartz/plugins/transformers/codeRunner.ts)
+Bij [Windesheim](https://windesheim.nl) gebruiken we deze quartz plugin om onze 
+interactieve code blocks te tonen. Deze Obsidian plugin wordt gebruikt om de 
+markdown bestanden met interactieve code blocks te maken en te testen tijdens 
+het schrijf proces.
 
-## Usage
-The markdown syntax to use the interactive code blocks is the same as the syntax 
-used in the [quartz plugin](https://github.com/Windesheim-HBO-ICT/Leertaken/blob/main/quartz/quartz/plugins/transformers/codeRunner.ts). Here are some examples:
+## Gebruik
+> [!CAUTION]    
+> De preview die deze plugin genereert is **NIET** gelijk aan de daadwerkelijke 
+> code block zoals die wordt gegenereert in de quartz plugin.
+>
+> *ALLE* code blocks zullen runnable gemaakt worden in deze preview, ook kunnen 
+> code blocks niet worden aangepast in de preview.
 
-Note that **all code blocks will be runable in the obsidian editor**. This is 
-**not** the case when they are properly displayed by the quartz plugin.
+
+De markdown syntax om interactieve code blocks te maken is uiteraard het zelfde 
+als de syntax die wordt gebruikt door de [quartz plugin](https://github.com/Windesheim-HBO-ICT/Leertaken/blob/main/quartz/quartz/plugins/transformers/codeRunner.ts). 
+
+Hier een kleine samenvatting:
 
 ````md
 ```javascript runner
@@ -34,11 +46,10 @@ console.log('I am runable, editable and my language can be changed. This is a wh
 ```
 ````
 
-## Limitations
-Because this plugin is purely meant for testing code blocks it mostly just runs 
-and does not do anything else. That is why it has some major limitations.
+## Limitaties
+Omdat deze plugin puur gemaakt is om interactieve code blocks te schrijven en 
+te testen is de preview erg gelimiteerd. Enkele limitaties zijn:
 
-- No editing
-- No sandbox
-- No syntax highlighting
-
+- Geen editing
+- Geen sandbox modus
+- Geen syntax highlighting
