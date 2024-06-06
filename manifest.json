@@ -1,9 +1,9 @@
 {
 	"id": "interactive-code-blocks",
-	"name": "Windesheim's Interactive Code Blocks",
+	"name": "Interactive Code Blocks",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Preview Windeheim's interactive code block in obsidian!",
-	"author": "ItsSiem & TeunvdKleij",
+	"description": "Preview interactive code blocks!",
+	"author": "Team Deeltaken",
 	"isDesktopOnly": true 
 }
