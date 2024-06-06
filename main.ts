@@ -13,8 +13,11 @@ export default class SyntaxCheckerPlugin extends Plugin {
 			for (let i = 0; i < codeblocks.length; i++) {
 				const codeblock = codeblocks[i];
 				const language = codeblock.className.split("-")[1];
-				const code = codeblock.innerHTML;
-				element.innerHTML = `<code-block language=${language}>${code}</code-block>`;
+				const code = codeblock.getText();
+                const el = document.createElement("code-block");
+                el.setAttribute("language", language);
+                el.setText(code);
+                element.replaceChildren(el);
 			}
 		});
 	}
