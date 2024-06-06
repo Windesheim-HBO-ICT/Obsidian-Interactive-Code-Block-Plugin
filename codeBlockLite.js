@@ -31,21 +31,21 @@ export class CodeBlock extends HTMLElement {
 
     const sandbox = document.createElement('div');
 
-    let rawCode = this.innerHTML;
+    let rawCode = this.getText();
     // Create a sandbox element to parse HTML entities (e.g. &lt;)
     (rawCode.match(/&.+;/ig) || []).forEach(entity => {
       // Insert the HTML entity as HTML in an HTML element:
-      sandbox.innerHTML = entity;
+      sandbox.setText(entity);
 
       // Retrieve the HTML elements innerText to get the parsed entity (the actual character):
-      rawCode = rawCode.replace(entity, sandbox.innerText);
+      rawCode = rawCode.replace(entity, sandbox.getText());
     });
 
     this.code = rawCode;
 
     sandbox.remove();
 
-    this.innerHTML = '';
+    this.replaceWith = '';
   }
 
   render() {
@@ -154,9 +154,9 @@ export class CodeBlock extends HTMLElement {
 
     // Event listener for the clear button
     clearButton.addEventListener('click', () => {
-      if (this.shadowRoot.getElementById('output').innerText === 'Running...')
+      if (this.shadowRoot.getElementById('output').getText() === 'Running...')
         return;
-      this.shadowRoot.getElementById('output').innerText = '';
+      this.shadowRoot.getElementById('output').replaceWith('');
       this.shadowRoot.getElementById('outputContainer').classList.add('hidden');
     });
 
@@ -198,7 +198,7 @@ export class CodeBlock extends HTMLElement {
     const output = this.shadowRoot.getElementById('output');
     const outputContainer = this.shadowRoot.getElementById('outputContainer');
     outputContainer.classList.remove('hidden');
-    output.innerText = result;
+    output.setText(result);
   }
 }
 
