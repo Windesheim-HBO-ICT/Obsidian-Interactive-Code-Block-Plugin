@@ -1,7 +1,7 @@
 {
 	"id": "interactive-code-blocks",
 	"name": "Interactive Code Blocks",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Preview interactive code blocks!",
 	"author": "Team Deeltaken",
