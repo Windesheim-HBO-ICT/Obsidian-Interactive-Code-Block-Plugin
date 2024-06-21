@@ -289,7 +289,6 @@ export class CodeBlock extends HTMLElement {
     setResults(result) {
         const output = this.shadowRoot.getElementById('output');
         const outputContainer = this.shadowRoot.getElementById('outputContainer');
-        console.log(output);
         outputContainer.classList.remove('hidden');
         output.setText(result);
     }
